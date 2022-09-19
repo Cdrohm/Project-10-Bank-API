@@ -122,13 +122,13 @@ module.exports.getUserTransactions = async serviceData => {
 
 
 module.exports.getUserTransactionID = async serviceData => {
-  console.log('getUserTransactionID STARTED');
+  // console.log('getUserTransactionID STARTED');
   try {
     const transactionID = serviceData.url.split('transaction/')[1]
     const jwtToken = serviceData.headers.authorization.split('Bearer')[1].trim()
     const decodedJwtToken = jwt.decode(jwtToken)
     const user = await User.findOne({ _id: decodedJwtToken.id })
-    console.log('TR-ID -', user);
+    // console.log('TR-ID -', user);
 
     let transactions = user.transactions
     let transaction = transactions
@@ -138,7 +138,7 @@ module.exports.getUserTransactionID = async serviceData => {
       throw new Error('User not found!')
     }
 
-    console.log('TRANS-', transaction);
+    // console.log('TRANS-', transaction);
     if (!transactions) {
       throw new Error('No transactions found!')
     }
@@ -151,7 +151,7 @@ module.exports.getUserTransactionID = async serviceData => {
 
 
 module.exports.deleteUserTransactionID = async serviceData => {
-  console.log('deleteUserTransactionID STARTED');
+  // console.log('deleteUserTransactionID STARTED');
   try {
     const transactionID = serviceData.url.split('transaction/')[1]
     const jwtToken = serviceData.headers.authorization.split('Bearer')[1].trim()
@@ -174,7 +174,7 @@ module.exports.deleteUserTransactionID = async serviceData => {
       }
     )
 
-    console.log('TRANS-', transaction);
+    // console.log('TRANS-', transaction);
     if (!user) {
       throw new Error('No transactions found!')
     }
@@ -187,12 +187,12 @@ module.exports.deleteUserTransactionID = async serviceData => {
 
 
 module.exports.updateUserTransactionID = async serviceData => {
-  console.log('updateUserTransactionID STARTED');
+  // console.log('updateUserTransactionID STARTED');
   try {
     const transactionID = serviceData.url.split('transaction/')[1]
     const jwtToken = serviceData.headers.authorization.split('Bearer')[1].trim()
     const decodedJwtToken = jwt.decode(jwtToken)
-    console.log('TR-ID -', transactionID, serviceData.body.data);
+    // console.log('TR-ID -', transactionID, serviceData.body.data);
 
     const user = await User.findOneAndUpdate(
       { _id: decodedJwtToken.id },
