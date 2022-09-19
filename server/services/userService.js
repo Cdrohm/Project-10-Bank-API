@@ -138,7 +138,7 @@ module.exports.getUserTransactionID = async serviceData => {
       throw new Error('User not found!')
     }
 
-    // console.log('TRANS-', transaction);
+    console.log('TRANS-', transaction);
     if (!transactions) {
       throw new Error('No transactions found!')
     }
