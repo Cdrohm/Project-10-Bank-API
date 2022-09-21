@@ -122,13 +122,13 @@ module.exports.getUserTransactions = async serviceData => {
 
 
 module.exports.getUserTransactionID = async serviceData => {
-  // console.log('getUserTransactionID STARTED');
+  console.log('getUserTransactionID STARTED');
   try {
     const transactionID = serviceData.url.split('transaction/')[1]
     const jwtToken = serviceData.headers.authorization.split('Bearer')[1].trim()
     const decodedJwtToken = jwt.decode(jwtToken)
     const user = await User.findOne({ _id: decodedJwtToken.id })
-    // console.log('TR-ID -', user);
+    console.log('TR-ID -', user);
 
     let transactions = user.transactions
     let transaction = transactions

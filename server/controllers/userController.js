@@ -77,7 +77,9 @@ module.exports.getUserTransactions = async (req, res) => {
   let response = {}
 
   try {
+    console.log('ptin')
     const responseFromService = await userService.getUserTransactions(req)
+    console.log(responseFromService)
     response.status = 200
     response.message = 'Successfully fetched transactions'
     response.body = responseFromService
