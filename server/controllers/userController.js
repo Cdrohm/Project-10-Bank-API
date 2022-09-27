@@ -77,7 +77,6 @@ module.exports.getUserTransactions = async (req, res) => {
   let response = {}
 
   try {
-    console.log('je suis là!')
     const responseFromService = await userService.getUserTransactions(req)
     console.log(responseFromService)
     response.status = 200
