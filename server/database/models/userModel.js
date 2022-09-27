@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//add transactions for mongo schema
 const userSchema = new mongoose.Schema(
   {
     email: String,

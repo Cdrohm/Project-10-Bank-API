@@ -19,6 +19,7 @@ router.put(
   userController.updateUserProfile
 )
 
+//add routes for transactions
 router.get(
   '/transaction',
   tokenValidation.validateToken,
@@ -26,19 +27,19 @@ router.get(
 )
 
 router.post(
-  /^\/transaction\/TS\d{4}-\d{4}$/,
+  /^\/transactions\/TS\d{4}-\d{4}$/,
   tokenValidation.validateToken,
   userController.getUserTransactionID
 )
 
 router.delete(
-  /^\/transaction\/TS\d{4}-\d{4}$/,
+  /^\/transactions\/TS\d{4}-\d{4}$/,
   tokenValidation.validateToken,
   userController.deleteUserTransactionID
 )
 
 router.put(
-  /^\/transaction\/TS\d{4}-\d{4}$/,
+  /^\/transactions\/TS\d{4}-\d{4}$/,
   tokenValidation.validateToken,
   userController.updateUserTransactionID
 )

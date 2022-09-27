@@ -72,12 +72,12 @@ module.exports.updateUserProfile = async (req, res) => {
   return res.status(response.status).send(response)
 }
 
-
+//add transactions part
 module.exports.getUserTransactions = async (req, res) => {
   let response = {}
 
   try {
-    console.log('ptin')
+    console.log('je suis là!')
     const responseFromService = await userService.getUserTransactions(req)
     console.log(responseFromService)
     response.status = 200

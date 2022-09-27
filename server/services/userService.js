@@ -97,7 +97,7 @@ module.exports.updateUserProfile = async serviceData => {
   }
 }
 
-
+//add transactions part
 module.exports.getUserTransactions = async serviceData => {
   try {
     const jwtToken = serviceData.headers.authorization.split('Bearer')[1].trim()
