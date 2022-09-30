@@ -12,21 +12,21 @@ const users = [
         id: 'TS0001-0605', date: 'June 5th, 2021', description: 'Fleming & Co.', amount: 40, balance: 2147.79, details: {
           type: 'Furnitures',
           category: 'Office Furniture',
-          notes: '1,000,000 trombones for Edith'
+          notes: '1 gold pen for Mery'
         }
       },
       {
         id: 'TS0002-0612', date: 'June 12th, 2021', description: 'Golden Sun Bakery', amount: 30, balance: 2187.79, details: {
           type: 'Representation',
           category: 'Food',
-          notes: 'Biggest sausage EVER!\n My dream come true XD'
+          notes: 'local food truck'
         }
       },
       {
         id: 'TS0003-0620', date: 'June 20th, 2021', description: 'Golden Sun Bakery', amount: 5, balance: 2217.79, details: {
           type: 'Representation',
           category: 'Food',
-          notes: 'Pickles & wine...'
+          notes: 'Champagne and bakery'
         }
       },
       {
