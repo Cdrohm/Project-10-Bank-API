@@ -27,19 +27,20 @@ router.get(
 )
 
 router.post(
-  /^\/transactions\/TS\d{4}-\d{4}$/,
+ /^\/transaction\/TS\d{4}-\d{4}$/,
+  //'/transaction/TS0001-0605',
   tokenValidation.validateToken,
   userController.getUserTransactionID
 )
 
 router.delete(
-  /^\/transactions\/TS\d{4}-\d{4}$/,
+  /^\/transaction\/TS\d{4}-\d{4}$/,
   tokenValidation.validateToken,
   userController.deleteUserTransactionID
 )
 
 router.put(
-  /^\/transactions\/TS\d{4}-\d{4}$/,
+  /^\/transaction\/TS\d{4}-\d{4}$/,
   tokenValidation.validateToken,
   userController.updateUserTransactionID
 )
